@@ -3,34 +3,52 @@ import { cn } from "@/lib/utils";
 
 const skills = [
   // Frontend
-  { name: "HTML/CSS", level: 95, category: "frontend" },
-  { name: "JavaScript", level: 90, category: "frontend" },
-  { name: "React", level: 90, category: "frontend" },
-  { name: "TypeScript", level: 85, category: "frontend" },
-  { name: "Tailwind CSS", level: 90, category: "frontend" },
-  { name: "Next.js", level: 80, category: "frontend" },
-
+  { name: "HTML/CSS", level: 80, category: "Frontend" },
+  { name: "JavaScript", level: 80, category: "Frontend" },
+  { name: "BootStrap", level: 80, category: "Frontend" },
+  { name: "React JS", level: 75, category: "Frontend" },
+  { name: "Redux", level: 70, category: "Frontend" },
+  { name: "TypeScript", level: 70, category: "Frontend" },
+  { name: "Tailwind CSS", level: 70, category: "Frontend" },
+  { name: "Material UI", level: 70, category: "Frontend" },
+  { name: "GSAP", level: 70, category: "Frontend" },
+  { name: "WordPress", level: 70, category: "Frontend" },
+  // { name: "Next.js", level: 80, category: "frontend" },
+  
+  // Mobile Apps
+  { name: "React Native", level: 70, category: "Mobile App" },
+  
   // Backend
-  { name: "Node.js", level: 80, category: "backend" },
-  { name: "Express", level: 75, category: "backend" },
-  { name: "MongoDB", level: 70, category: "backend" },
-  { name: "PostgreSQL", level: 65, category: "backend" },
-  { name: "GraphQL", level: 60, category: "backend" },
+  { name: "Node.js", level: 70, category: "Backend" },
+  { name: "Express", level: 70, category: "Backend" },
+  { name: "MongoDB", level: 70, category: "Backend" },
+  { name: "SQL", level: 70, category: "Backend" },
+  // { name: "GraphQL", level: 60, category: "backend" },
 
   // Tools
-  { name: "Git/GitHub", level: 90, category: "tools" },
-  { name: "Docker", level: 70, category: "tools" },
-  { name: "Figma", level: 85, category: "tools" },
-  { name: "VS Code", level: 95, category: "tools" },
+  { name: "Git", level: 90, category: "Tools" },
+  { name: "GitHub", level: 90, category: "Tools" },
+  { name: "Vercel", level: 70, category: "Tools" },
+  { name: "Netlify", level: 70, category: "Tools" },
+  { name: "Postman", level: 70, category: "Tools" },
+  { name: "Figma", level: 70, category: "Tools" },
+  { name: "VS Code", level: 95, category: "Tools" },
+  
+  // Languages
+  { name: "C", level: 70, category: "Languages" },
+  { name: "C++", level: 70, category: "Languages" },
+  { name: "Java", level: 70, category: "Languages" },
+  { name: "JavaScript", level: 80, category: "Languages" },
+  { name: "TypeScript", level: 70, category: "Languages" },
 ];
 
-const categories = ["all", "frontend", "backend", "tools"];
+const categories = ["All","Frontend", "Backend", "Tools","Mobile App", "Languages"];
 
 export const SkillsSection = () => {
-  const [activeCategory, setActiveCategory] = useState("all");
+  const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredSkills = skills.filter(
-    (skill) => activeCategory === "all" || skill.category === activeCategory
+    (skill) => activeCategory === "All" || skill.category === activeCategory
   );
   return (
     <section id="skills" className="py-24 px-4 relative bg-secondary/30">
@@ -45,7 +63,7 @@ export const SkillsSection = () => {
               key={key}
               onClick={() => setActiveCategory(category)}
               className={cn(
-                "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
+                "px-5 py-2 rounded-full transition-colors duration-300 capitalize cursor-pointer",
                 activeCategory === category
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary/70 text-forefround hover:bd-secondary"
@@ -56,7 +74,7 @@ export const SkillsSection = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6">
           {filteredSkills.map((skill, key) => (
             <div
               key={key}
