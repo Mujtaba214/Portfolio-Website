@@ -38,13 +38,13 @@ const projects = [
   },
   {
     id: 4,
-    title: "Beauty and Mindful",
-    description: "Beauty and Mindful – Where outer elegance meets inner peace.",
-    image: "/projects/BandM.png",
-    tags: ["ReactJS", "Contentful", "TailwindCSS", "CMS"],
-    category: "CMS",
-    demoUrl: "https://beautyandmindful.com/",
-    // githubUrl: "#",
+    title: "SecureVision Dashboard",
+    description: "emphasizes visibility into security.  ",
+    image: "/projects/SD.png",
+    tags: ["ReactJS", "NodeJS", "TailwindCSS", "ExpressJS", "PostgreSQL"],
+    category: "Backend",
+    demoUrl: "https://securitydashboardinfo.netlify.app/signin",
+    githubUrl: "https://github.com/Mujtaba214/Security-Dashboard-Frontend",
   },
   {
     id: 5,
@@ -103,7 +103,7 @@ const projects = [
   },
 ];
 
-const categories = ["All", "Frontend", "Fullstack", "CMS"];
+const categories = ["All", "Frontend", "Backend", "Fullstack", "CMS"];
 
 export const ProjectsSection = () => {
   const [activeCategory, setActiveCategory] = useState("All");
