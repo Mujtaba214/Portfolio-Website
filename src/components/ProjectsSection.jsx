@@ -51,7 +51,7 @@ const projects = [
     title: "AI Note Summarizer",
     description:
       "An AI-powered web app that condenses lengthy notes or paragraphs into concise summaries using natural language processing. Built with a clean and responsive UI for students and professionals.",
-    image: "/projects/AINoteSummarizer.png",
+    image: "/projects/AI Notes.png",
     tags: ["React", "Express", "Node.js", "PostgreSQL", "AI API", "CORS"],
     category: ["Backend", "Fullstack"],
     demoUrl: "https://ai-paragraph-summarizer.netlify.app/",
@@ -120,9 +120,13 @@ const categories = ["All", "Frontend", "Backend", "Fullstack", "CMS"];
 export const ProjectsSection = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const filteredProjects = projects.filter(
-    (project) => activeCategory === "All" || project.category === activeCategory
-  );
+  const filteredProjects = projects.filter((project) => {
+    if (activeCategory === "All") return true;
+    if (Array.isArray(project.category)) {
+      return project.category.includes(activeCategory);
+    }
+    return project.category === activeCategory;
+  });
 
   return (
     <section id="projects" className="py-24 px-4 relative">
