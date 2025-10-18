@@ -42,12 +42,24 @@ const projects = [
     description: "emphasizes visibility into security.  ",
     image: "/projects/SD.png",
     tags: ["ReactJS", "NodeJS", "TailwindCSS", "ExpressJS", "PostgreSQL"],
-    category: "Backend",
+    category: ["Backend", "Fullstack"],
     demoUrl: "https://securitydashboardinfo.netlify.app/signin",
     githubUrl: "https://github.com/Mujtaba214/Security-Dashboard-Frontend",
   },
   {
     id: 5,
+    title: "AI Note Summarizer",
+    description:
+      "An AI-powered web app that condenses lengthy notes or paragraphs into concise summaries using natural language processing. Built with a clean and responsive UI for students and professionals.",
+    image: "/projects/AINoteSummarizer.png",
+    tags: ["React", "Express", "Node.js", "PostgreSQL", "AI API", "CORS"],
+    category: ["Backend", "Fullstack"],
+    demoUrl: "https://ai-paragraph-summarizer.netlify.app/",
+    githubUrl: "https://github.com/Mujtaba214/AI-Text-Summarizer-Frontend",
+  },
+
+  {
+    id: 6,
     title: "Restaurant Website",
     description:
       "An interactive platform for managing courses, tracking student progress, and delivering online education efficiently.",
@@ -58,7 +70,7 @@ const projects = [
     githubUrl: "https://github.com/Mujtaba214/Restaurant",
   },
   {
-    id: 6,
+    id: 7,
     title: "Brilliant Media",
     description:
       "Brilliant Media helps entrepreneurs become thought leaders.It’s time to write your business-building bestseller.",
@@ -69,7 +81,7 @@ const projects = [
     // githubUrl: "#",
   },
   {
-    id: 7,
+    id: 8,
     title: "Autos Insight",
     description:
       "Autos Insight, a global leader in providing vehicle history reports, is committed to enhancing road safety and promoting transparency in the worldwide used car market.",
@@ -80,7 +92,7 @@ const projects = [
     // githubUrl: "#",
   },
   {
-    id: 8,
+    id: 9,
     title: "Mursheed Protections",
     description:
       "Mursheed Protection, Inc., Southern California’s premier full service private security company. We provide cost-effective professional and reliable on-site security.",
@@ -91,7 +103,7 @@ const projects = [
     // githubUrl: "#",
   },
   {
-    id: 9,
+    id: 10,
     title: "Rivet Leathers",
     description:
       "Rivet Leathers – Crafted to Endure, Styled to Impress.Where timeless craftsmanship meets bold sophistication.Elevate your everyday with premium leather goods.",
