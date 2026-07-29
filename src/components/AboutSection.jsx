@@ -40,7 +40,7 @@ export const AboutSection = () => {
               </a>
 
               <a
-                href="/Muhammad-Mujtaba Resume.pdf"
+                href="/Mujtaba Full Stack Web & App Dev Resume.pdf"
                 download
                 target="_blank"
                 rel="noopener noreferrer"
